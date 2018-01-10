@@ -85,53 +85,6 @@ for (i in 1:NumColleges)
 OverAllRecord <- OverAllRecord[order(OverAllRecord[,"Winner"]), ]
 colnames(OverAllRecord)[1]<-"College"
 
-
-cat("\n")
-print(OverAllRecord[,1])
-cat("\n")
-cat("Above are all the team that are in the given data\n")
-cat("\n")
-cat(paste("Total number of teams: ", nrow(OverAllRecord),"\n",sep=""))
-cat("\n")
-cat("Press return to continue: ")
-Continue <- readLines("stdin", n=1)
-if (Continue != "")
-{
-  stop("The user chose to end the program")
-}
-
-cat("\n")
-options(width=120)
-print(competitions[c(1,2)], right = FALSE)
-options(width=75)
-
-cat("\n")
-cat("Above are all the matches that are in the given data\n")
-cat("\n")
-cat(paste("Total number of matches: ", nrow(competitions),"\n",sep=""))
-cat("\n")
-
-cat("Press return to continue: ")
-Continue <- readLines("stdin", n=1)
-if (Continue != "")
-{
-  stop("The user chose to end the program")
-}
-cat("\n")
-print(OverAllRecord[c(1,2,3)], right = FALSE, row.names = FALSE)
-
-cat("\n")
-cat("Above are all the overall records for each team\n")
-cat("\n")
-cat("Press return to continue to calculating rankings: ")
-Continue <- readLines("stdin", n=1)
-if (Continue != "")
-{
-  stop("The user chose to end the program")
-}
-cat("\n")
-  
-
 # Create and populates collegeMatrix of all teams to hold their records against each other
 # CollegeMatrix[i, j] holds how many times team i has beaten team j
 NamesColleges <- OverAllRecord[,1]
