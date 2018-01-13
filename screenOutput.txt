@@ -1,0 +1,481 @@
+iMac:Men2017_18 pomphrey$ ../ELO.x
+
+ Rscale =    6.6699999999999999     
+
+ Enter T or I for Team or Individual ranking calc
+
+
+T
+
+ Enter minimum # matches required for a ranking
+
+1
+
+# Teams (NTEAMS) = 69   (see file list_of_teams_men_2017-18)
+
+ List of teams (preferably ordered by pre-season rank):
+  1  (V) Trinity College                                     2  (V) Harvard University                                  3  (V) St. Lawrence University                             4  (V) Columbia University                               
+  5  (V) University of Pennsylvania                          6  (V) University of Rochester                             7  (V) Drexel University                                   8  (V) Princeton University                              
+  9  (V) Yale University                                    10  (V) Dartmouth College                                  11  (V) George Washington University                       12  (V) Cornell University                                
+ 13  (V) Western Ontario                                    14  (V) Naval Academy                                      15  (V) Franklin and Marshall College                      16  (V) Bates College                                     
+ 17  (V) University of Virginia                             18  (V) Middlebury College                                 19  (V) Brown University                                   20  (V) Williams College                                  
+ 21  (V) MIT                                                22  (V) Dickinson College                                  23  (V) Colby College                                      24  (V) Amherst College                                   
+ 25  (V) Wesleyan University                                26  (V) Hobart College                                     27  (V) Bowdoin College                                    28  (V) Tufts University                                  
+ 29  (V) Hamilton College                                   30  (V) Connecticut College                                31  (V) Haverford College                                  32  (V) Bard College                                      
+ 33  (V) Fordham University                                 34  (V) Vassar College                                     35  (C) Stanford University                                36  (C) New York University                               
+ 37  (C) Bucknell University                                38  (C) Georgetown University                              39  (C) Boston College                                     40  (C) Denison University                                
+ 41  (C) Chicago, University of                             42  (C) Washington, University of                          43  (C) Richmond, University of                            44  (C) Northeastern University                           
+ 45  (C) Boston University                                  46  (C) Johns Hopkins University                           47  (C) Lehigh University                                  48  (C) Northwestern University                           
+ 49  (C) Colgate University                                 50  (C) Lafayette College                                  51  (C) Swarthmore College                                 52  (C) Bryant University                                 
+ 53  (C) North Carolina, Chapel Hill, University of         54  (C) Brandeis University                                55  (C) Siena College                                      56  (C) Babson College                                    
+ 57  (C) Penn State University                              58  (C) William & Mary                                     59  (C) Kenyon College                                     60  (C) Ohio St University                                
+ 61  (C) Washington University in St. Louis                 62  (C) Davidson College                                   63  (C) Sewanee: University of the South                   64  (C) Minnesota, University of                          
+ 65  (C) Duke University                                    66  (C) University of North Carolina, Chapel Hill          67  (C) University of Vermont                              68  (C) University of Notre Dame                          
+ 69  (C) Indiana University Bloomington                    
+
+ Hit return to continue
+
+
+
+ Performing ELO ranking of Teams
+
+number of match result files =     1
+
+match result file #  1: Team_and_Individual_Results_All comprises   170 team matches
+
+Total number of team matches to be processed =  170
+10/01/17  Brandeis University                               3              Babson College                                    6
+10/08/17  Brandeis University                               6              Bryant University                                 3
+10/15/17  Boston University                                 9              Brandeis University                               0
+10/21/17  Bucknell University                               6              Denison University                                3
+10/21/17  Siena College                                     9              University of Vermont                             0
+10/22/17  Boston University                                 7              Bryant University                                 2
+10/22/17  Boston University                                 9              Babson College                                    0
+10/24/17  Boston University                                 5              Boston College                                    4
+10/27/17  Northeastern University                           9              Babson College                                    0
+10/30/17  University of North Carolina, Chapel Hill         3              Duke University                                   5
+10/30/17  University of North Carolina, Chapel Hill         8              Sewanee: University of the South                  1
+10/30/17  Sewanee: University of the South                  0              Duke University                                   9
+10/30/17  Sewanee: University of the South                  0              Davidson College                                  9
+10/30/17  Davidson College                                  3              Duke University                                   5
+11/02/17  MIT                                               9              Boston University                                 0
+11/02/17  MIT                                               9              Babson College                                    0
+11/03/17  Northwestern University                           0              Naval Academy                                     9
+11/03/17  Chicago, University of                            0              Western Ontario                                   9
+11/03/17  Northwestern University                           8              Minnesota, University of                          1
+11/04/17  Chicago, University of                            0              Naval Academy                                     9
+11/04/17  Naval Academy                                     2              Western Ontario                                   7
+11/04/17  Dickinson College                                 7              University of Virginia                            2
+11/04/17  Vassar College                                    0              Fordham University                                9
+11/04/17  Vassar College                                    7              Lafayette College                                 2
+11/04/17  Northwestern University                           0              Western Ontario                                   9
+11/04/17  Hobart College                                    9              Bard College                                      0
+11/04/17  Bard College                                      9              Washington University in St. Louis                0
+11/04/17  Chicago, University of                            8              Northwestern University                           1
+11/04/17  Denison University                                7              Washington University in St. Louis                0
+11/04/17  Denison University                                1              Hobart College                                    8
+11/04/17  Fordham University                                8              Swarthmore College                                1
+11/04/17  Hobart College                                    7              Washington University in St. Louis                0
+11/04/17  Ohio St University                                4              Kenyon College                                    3
+11/04/17  Siena College                                     2              Lehigh University                                 7
+11/05/17  Franklin and Marshall College                     4              University of Virginia                            5
+11/05/17  Vassar College                                    0              Boston University                                 9
+11/05/17  Vassar College                                    5              Swarthmore College                                4
+11/05/17  Denison University                                6              Bard College                                      3
+11/05/17  Minnesota, University of                          2              University of Notre Dame                          7
+11/05/17  Fordham University                                9              Lafayette College                                 0
+11/05/17  Fordham University                                8              Boston University                                 1
+11/05/17  Lafayette College                                 5              Swarthmore College                                4
+11/05/17  University of Notre Dame                          8              Indiana University Bloomington                    1
+11/07/17  MIT                                               9              Boston College                                    0
+11/09/17  MIT                                               9              Northeastern University                           0
+11/10/17  George Washington University                      9              William & Mary                                    0
+11/10/17  Naval Academy                                     9              Fordham University                                0
+11/10/17  New York University                               0              Columbia University                               9
+11/11/17  Haverford College                                 8              Boston University                                 1
+11/11/17  Naval Academy                                     9              Boston University                                 0
+11/11/17  Naval Academy                                     9              Johns Hopkins University                          0
+11/11/17  University of Pennsylvania                        9              Franklin and Marshall College                     0
+11/11/17  Drexel University                                 9              Dickinson College                                 0
+11/11/17  Bard College                                      9              Vassar College                                    0
+11/11/17  George Washington University                      9              Bucknell University                               0
+11/11/17  William & Mary                                    0              Bucknell University                               9
+11/11/17  Vassar College                                    6              Siena College                                     3
+11/11/17  Fordham University                                8              Georgetown University                             1
+11/11/17  Fordham University                                2              Haverford College                                 7
+11/11/17  Bard College                                      9              Swarthmore College                                0
+11/11/17  Siena College                                     0              Penn State University                             9
+11/12/17  Naval Academy                                     9              Georgetown University                             0
+11/12/17  University of Pennsylvania                        8              Drexel University                                 1
+11/12/17  Franklin and Marshall College                     5              Dickinson College                                 4
+11/12/17  Babson College                                    2              Bryant University                                 7
+11/12/17  Colgate University                                1              Vassar College                                    7
+11/12/17  Fordham University                                9              Johns Hopkins University                          0
+11/12/17  Bard College                                      7              Penn State University                             2
+11/12/17  Bard College                                      9              Colgate University                                0
+11/12/17  Siena College                                     3              Swarthmore College                                6
+11/12/17  Georgetown University                             4              Boston University                                 5
+11/12/17  Colgate University                                2              Swarthmore College                                6
+11/14/17  University of Rochester                           8              Western Ontario                                   1
+11/14/17  Northeastern University                           3              Boston College                                    6
+11/17/17  Naval Academy                                     8              MIT                                               1
+11/17/17  Williams College                                  2              Cornell University                                7
+11/17/17  Bowdoin College                                   0              Bates College                                     9
+11/17/17  Amherst College                                   9              Tufts University                                  0
+11/17/17  Richmond, University of                           8              William & Mary                                    1
+11/18/17  George Washington University                      0              Trinity College                                   9
+11/18/17  Haverford College                                 9              Swarthmore College                                0
+11/18/17  Franklin and Marshall College                     0              Princeton University                              9
+11/18/17  Naval Academy                                     9              Stanford University                               0
+11/18/17  Naval Academy                                     9              Hobart College                                    0
+11/18/17  Colby College                                     8              Connecticut College                               1
+11/18/17  Dickinson College                                 2              Cornell University                                7
+11/18/17  Williams College                                  4              Dickinson College                                 5
+11/18/17  Drexel University                                 2              Columbia University                               7
+11/18/17  MIT                                               7              Hobart College                                    2
+11/18/17  MIT                                               9              Johns Hopkins University                          0
+11/18/17  Amherst College                                   9              Boston University                                 0
+11/18/17  Wesleyan University                               9              Vassar College                                    0
+11/18/17  Bates College                                     9              Connecticut College                               0
+11/18/17  Tufts University                                  4              Hamilton College                                  5
+11/18/17  Williams College                                  1              Western Ontario                                   8
+11/18/17  Cornell University                                3              Western Ontario                                   6
+11/18/17  Wesleyan University                               9              Bryant University                                 0
+11/18/17  Vassar College                                    4              Bryant University                                 5
+11/18/17  University of Virginia                            0              University of Pennsylvania                        9
+11/18/17  Denison University                                8              Johns Hopkins University                          1
+11/18/17  Denison University                                1              Stanford University                               8
+11/18/17  Bucknell University                               8              Johns Hopkins University                          1
+11/19/17  George Washington University                      3              Princeton University                              6
+11/19/17  Naval Academy                                     9              Denison University                                0
+11/19/17  Naval Academy                                     2              University of Pennsylvania                        7
+11/19/17  Williams College                                  9              Hamilton College                                  0
+11/19/17  Drexel University                                 0              Trinity College                                   9
+11/19/17  Columbia University                               9              Franklin and Marshall College                     0
+11/19/17  MIT                                               9              Bucknell University                               0
+11/19/17  MIT                                               8              Denison University                                1
+11/19/17  Tufts University                                  9              Bard College                                      0
+11/19/17  Tufts University                                  9              Boston College                                    0
+11/19/17  Richmond, University of                           8              University of North Carolina, Chapel Hill         1
+11/19/17  University of Virginia                            9              Richmond, University of                           0
+11/19/17  Bowdoin College                                   8              Connecticut College                               1
+11/19/17  Boston College                                    2              Bard College                                      7
+11/19/17  University of Virginia                            9              University of North Carolina, Chapel Hill         0
+11/19/17  Brandeis University                               3              Bryant University                                 6
+11/19/17  Hobart College                                    7              Johns Hopkins University                          0
+11/19/17  Hobart College                                    9              Georgetown University                             0
+11/19/17  Stanford University                               8              Bucknell University                               1
+11/19/17  Stanford University                               8              Georgetown University                             1
+11/28/17  George Washington University                      6              University of Virginia                            3
+11/30/17  Northeastern University                           6              Boston University                                 3
+12/01/17  Drexel University                                 3              Yale University                                   6
+12/02/17  George Washington University                      3              Dartmouth College                                 6
+12/02/17  Vassar College                                    0              Haverford College                                 9
+12/02/17  Princeton University                              4              St. Lawrence University                           5
+12/02/17  Princeton University                              8              Williams College                                  1
+12/02/17  Naval Academy                                     2              Dartmouth College                                 7
+12/02/17  Wesleyan University                               1              Colby College                                     8
+12/02/17  Franklin and Marshall College                     0              Yale University                                   9
+12/02/17  Cornell University                                2              Columbia University                               7
+12/02/17  Cornell University                                4              University of Virginia                            5
+12/02/17  Amherst College                                   9              Northeastern University                           0
+12/02/17  Amherst College                                   9              Connecticut College                               0
+12/02/17  Wesleyan University                               2              Tufts University                                  7
+12/02/17  Vassar College                                    0              Bates College                                     9
+12/02/17  Bates College                                     7              Haverford College                                 2
+12/02/17  Hamilton College                                  0              Middlebury College                                9
+12/02/17  Columbia University                               8              University of Virginia                            1
+12/02/17  Northeastern University                           1              Connecticut College                               8
+12/02/17  Siena College                                     1              Bryant University                                 8
+12/02/17  Bard College                                      9              Bryant University                                 0
+12/02/17  Bard College                                      9              Siena College                                     0
+12/02/17  Fordham University                                9              Penn State University                             0
+12/02/17  Fordham University                                9              Duke University                                   0
+12/02/17  Ohio St University                                9              Indiana University Bloomington                    0
+12/02/17  Ohio St University                                0              University of Notre Dame                          9
+12/02/17  Denison University                                9              University of Notre Dame                          0
+12/02/17  Hamilton College                                  6              Bowdoin College                                   3
+12/02/17  Hobart College                                    5              Bowdoin College                                   4
+12/02/17  New York University                               7              Duke University                                   2
+12/02/17  New York University                               7              Penn State University                             2
+12/03/17  George Washington University                      9              Dickinson College                                 0
+12/03/17  Franklin and Marshall College                     1              Dartmouth College                                 8
+12/03/17  Drexel University                                 9              Williams College                                  0
+12/03/17  University of Pennsylvania                        9              Williams College                                  0
+12/03/17  University of Virginia                            9              Hobart College                                    0
+12/03/17  Fordham University                                8              New York University                               1
+12/03/17  University of Pennsylvania                        3              St. Lawrence University                           6
+12/05/17  Yale University                                   8              Brown University                                  1
+12/06/17  Dartmouth College                                 0              Harvard University                                9
+12/07/17  Harvard University                                9              MIT                                               0
+12/08/17  Williams College                                  0              Trinity College                                   9
+12/08/17  Wesleyan University                               3              Connecticut College                               6
+12/09/17  Princeton University                              7              Drexel University                                 2
+12/09/17  Williams College                                  0              Dartmouth College                                 9
+12/09/17  Middlebury College                                0              Dartmouth College                                 9
+12/09/17  MIT                                               9              Bowdoin College                                   0
+
+  170 matches being processed
+
+ Hit return to continue
+ Performing ELO ranking of Teams
+
+ For teams playing each other multiple times, see fort.55
+
+ Win, Loss, Tie record:
+ (Includes virtual wins and losses!)
+                                                  nmatches     Wins        Losses       Ties
+  Trinity College                                              3           3           0           0
+  Harvard University                                           2           2           0           0
+  St. Lawrence University                                      2           2           0           0
+  Columbia University                                          5           5           0           0
+  University of Pennsylvania                                   6           5           1           0
+  University of Rochester                                      1           1           0           0
+  Drexel University                                            7           2           5           0
+  Princeton University                                         5           4           1           0
+  Yale University                                              3           3           0           0
+  Dartmouth College                                            6           5           1           0
+  George Washington University                                 7           4           3           0
+  Cornell University                                           5           2           3           0
+  Western Ontario                                              6           5           1           0
+  Naval Academy                                               13          10           3           0
+  Franklin and Marshall College                                7           1           6           0
+  Bates College                                                4           4           0           0
+  University of Virginia                                       9           5           4           0
+  Middlebury College                                           2           1           1           0
+  Brown University                                             1           0           1           0
+  Williams College                                             9           1           8           0
+  MIT                                                         11           9           2           0
+  Dickinson College                                            6           2           4           0
+  Colby College                                                2           2           0           0
+  Amherst College                                              4           4           0           0
+  Wesleyan University                                          5           2           3           0
+  Hobart College                                               9           6           3           0
+  Bowdoin College                                              5           1           4           0
+  Tufts University                                             5           3           2           0
+  Hamilton College                                             4           2           2           0
+  Connecticut College                                          6           2           4           0
+  Haverford College                                            5           4           1           0
+  Bard College                                                11           8           3           0
+  Fordham University                                          11           9           2           0
+  Vassar College                                              11           4           7           0
+  Stanford University                                          4           3           1           0
+  New York University                                          4           2           2           0
+  Bucknell University                                          6           3           3           0
+  Georgetown University                                        5           0           5           0
+  Boston College                                               5           1           4           0
+  Denison University                                           9           4           5           0
+  Chicago, University of                                       3           1           2           0
+  Washington, University of                                    0           0           0           0
+  Richmond, University of                                      3           2           1           0
+  Northeastern University                                      6           2           4           0
+  Boston University                                           12           6           6           0
+  Johns Hopkins University                                     6           0           6           0
+  Lehigh University                                            1           1           0           0
+  Northwestern University                                      4           1           3           0
+  Colgate University                                           3           0           3           0
+  Lafayette College                                            3           1           2           0
+  Swarthmore College                                           7           2           5           0
+  Bryant University                                            8           4           4           0
+  North Carolina, Chapel Hill, University of                   0           0           0           0
+  Brandeis University                                          4           1           3           0
+  Siena College                                                7           1           6           0
+  Babson College                                               5           1           4           0
+  Penn State University                                        4           1           3           0
+  William & Mary                                               3           0           3           0
+  Kenyon College                                               1           0           1           0
+  Ohio St University                                           3           2           1           0
+  Washington University in St. Louis                           3           0           3           0
+  Davidson College                                             2           1           1           0
+  Sewanee: University of the South                             3           0           3           0
+  Minnesota, University of                                     2           0           2           0
+  Duke University                                              5           3           2           0
+  University of North Carolina, Chapel Hill                    4           1           3           0
+  University of Vermont                                        1           0           1           0
+  University of Notre Dame                                     4           3           1           0
+  Indiana University Bloomington                               2           0           2           0
+
+Hit return to continue
+
+
+ Using iterative solver for nonlinear eqs
+
+
+Monitoring progress of convergence to STOP_CRITERION =   1.000E-02
+iter =       0  maxval(abs(EWsum - Wsum)) =   3.500E+00
+iter =    1000  maxval(abs(EWsum - Wsum)) =   4.369E-02
+iter =    2000  maxval(abs(EWsum - Wsum)) =   2.432E-02
+iter =    3000  maxval(abs(EWsum - Wsum)) =   1.687E-02
+iter =    4000  maxval(abs(EWsum - Wsum)) =   1.292E-02
+iter =    5000  maxval(abs(EWsum - Wsum)) =   1.046E-02
+
+maxval(abs(EWsum - Wsum)) =   9.999E-03
+
+Iterations have converged in  5242 iterations
+(Expected wins = actual wins for each opponent)
+
+ Hit return to continue
+
+
+Final list of teams (or individuals) and ranking points:
+Trinity College                                       1127.808
+Harvard University                                    1156.970
+St. Lawrence University                               1161.388
+Columbia University                                   1119.171
+University of Pennsylvania                            1122.217
+University of Rochester                               1150.278
+Drexel University                                     1083.632
+Princeton University                                  1124.397
+Yale University                                       1118.447
+Dartmouth College                                     1123.593
+George Washington University                          1091.521
+Cornell University                                    1061.496
+Western Ontario                                       1116.523
+Naval Academy                                         1086.577
+Franklin and Marshall College                         1061.205
+Bates College                                         1106.597
+University of Virginia                                1064.699
+Middlebury College                                    1057.445
+Brown University                                       992.513
+Williams College                                      1035.590
+MIT                                                   1058.427
+Dickinson College                                     1057.822
+Colby College                                         1029.143
+Amherst College                                       1041.293
+Wesleyan University                                    946.549
+Hobart College                                        1028.281
+Bowdoin College                                        994.392
+Tufts University                                       993.204
+Hamilton College                                      1016.932
+Connecticut College                                    973.009
+Haverford College                                     1069.839
+Bard College                                           969.122
+Fordham University                                    1036.614
+Vassar College                                         898.724
+Stanford University                                   1054.670
+New York University                                   1005.137
+Bucknell University                                   1024.431
+Georgetown University                                  910.324
+Boston College                                         946.541
+Denison University                                     997.736
+Chicago, University of                                1023.835
+Washington, University of                            -4000.000
+Richmond, University of                               1004.370
+Northeastern University                                946.758
+Boston University                                      947.152
+Johns Hopkins University                               952.720
+Lehigh University                                     1004.332
+Northwestern University                                978.094
+Colgate University                                     823.559
+Lafayette College                                      877.516
+Swarthmore College                                     855.109
+Bryant University                                      919.092
+North Carolina, Chapel Hill, University of           -4000.000
+Brandeis University                                    913.370
+Siena College                                          828.710
+Babson College                                         916.017
+Penn State University                                  929.555
+William & Mary                                         955.950
+Kenyon College                                         901.857
+Ohio St University                                     938.797
+Washington University in St. Louis                     929.405
+Davidson College                                       937.197
+Sewanee: University of the South                       894.979
+Minnesota, University of                               927.394
+Duke University                                        973.846
+University of North Carolina, Chapel Hill              937.130
+University of Vermont                                  798.060
+University of Notre Dame                               969.186
+Indiana University Bloomington                         901.752
+
+ North Carolina, Chapel Hill, University of and Washington, University of have equal ranking points
+ Resolve the tie and re-order if necessary according to Head-to-Head results
+
+
+ Note Logic is flaky here and may not be satisfactory if more than 2 adjacent teams are involved
+ So must check by hand when see results!!
+
+ If necessary, interchange rows in output!!
+ No head-to-head match to resolve tie!!
+ Logic yet to be written to resolve this!
+
+ Final Calculated ELO Rankings: 
+Wins: # of wins against other teams being considered for rankings
+Losses: # of losses against other teams being considered for rankings
+Bestwin(1-->3): ranking positions of the 3 best wins against other teams being considered for rankings
+Worstloss(1-->3): ranking positions of the 3 worst losses against other teams being considered for rankings
+
+                                                               Ranking Pts       Wins       Losses     Bestwin(1)   (2)   (3)  Worstloss(1)   (2)   (3)
+  1   (V) St. Lawrence University                               1161.388           2           0               5     7     -             -     -     -
+  2   (V) Harvard University                                    1156.970           2           0               6    19     -             -     -     -
+  3   (V) University of Rochester                               1150.278           1           0              10     -     -             -     -     -
+  4   (V) Trinity College                                       1127.808           3           0              12    14    25             -     -     -
+  5   (V) Princeton University                                  1124.397           4           1              12    14    18             1     -     -
+  6   (V) Dartmouth College                                     1123.593           5           1              12    13    18             2     -     -
+  7   (V) University of Pennsylvania                            1122.217           5           1              13    14    16             1     -     -
+  8   (V) Columbia University                                   1119.171           5           0              14    16    17             -     -     -
+  9   (V) Yale University                                       1118.447           3           0              14    18    37             -     -     -
+ 10   (V) Western Ontario                                       1116.523           5           1              13    17    25             3     -     -
+ 11   (V) Bates College                                         1106.597           4           0              15    35    40             -     -     -
+ 12   (V) George Washington University                          1091.521           4           3              16    20    28             6     5     4
+ 13   (V) Naval Academy                                         1086.577          10           3              19    22    24            10     7     6
+ 14   (V) Drexel University                                     1083.632           2           5              20    25     -             9     8     7
+ 15   (V) Haverford College                                     1069.839           4           1              24    45    61            11     -     -
+ 16   (V) University of Virginia                                1064.699           5           4              17    18    27            20    12     8
+ 17   (V) Cornell University                                    1061.496           2           3              20    25     -            16    10     8
+ 18   (V) Franklin and Marshall College                         1061.205           1           6              20     -     -            16     9     8
+ 19   (V) MIT                                                   1058.427           9           2              27    28    34            13     2     -
+ 20   (V) Dickinson College                                     1057.822           2           4              16    25     -            18    17    14
+ 21   (V) Middlebury College                                    1057.445           1           1              30     -     -             6     -     -
+ 22   (C) Stanford University                                   1054.670           3           1              28    34    58            13     -     -
+ 23   (V) Amherst College                                       1041.293           4           0              36    40    45             -     -     -
+ 24   (V) Fordham University                                    1036.614           9           2              31    39    44            15    13     -
+ 25   (V) Williams College                                      1035.590           1           8              30     -     -            20    17    14
+ 26   (V) Colby College                                         1029.143           2           0              40    47     -             -     -     -
+ 27   (V) Hobart College                                        1028.281           6           3              34    35    42            19    16    13
+ 28   (C) Bucknell University                                   1024.431           3           3              34    43    44            22    19    12
+ 29   (C) Chicago, University of                                1023.835           1           2              38     -     -            13    10     -
+ 30   (V) Hamilton College                                      1016.932           2           2              35    36     -            25    21     -
+ 31   (C) New York University                                   1005.137           2           2              39    52     -            24     8     -
+ 32   (C) Richmond, University of                               1004.370           2           1              43    51     -            16     -     -
+ 33   (C) Lehigh University                                     1004.332           1           0              65     -     -             -     -     -
+ 34   (C) Denison University                                     997.736           4           5              41    42    44            28    27    22
+ 35   (V) Bowdoin College                                        994.392           1           4              40     -     -            30    27    19
+ 36   (V) Tufts University                                       993.204           3           2              42    47    48            30    23     -
+ 37   (V) Brown University                                       992.513           0           1               -     -     -             9     -     -
+ 38   (C) Northwestern University                                978.094           1           3              54     -     -            29    13    10
+ 39   (C) Duke University                                        973.846           3           2              50    51    62            31    24     -
+ 40   (V) Connecticut College                                    973.009           2           4              46    47     -            35    26    23
+ 41   (C) University of Notre Dame                               969.186           3           1              49    54    60            34     -     -
+ 42   (V) Bard College                                           969.122           8           3              48    52    53            36    34    27
+ 43   (C) William & Mary                                         955.950           0           3               -     -     -            32    28    12
+ 44   (C) Johns Hopkins University                               952.720           0           6               -     -     -            34    28    27
+ 45   (C) Boston University                                      947.152           6           6              48    55    56            46    24    23
+ 46   (C) Northeastern University                                946.758           2           4              45    56     -            48    40    23
+ 47   (V) Wesleyan University                                    946.549           2           3              55    61     -            40    36    26
+ 48   (C) Boston College                                         946.541           1           4              46     -     -            45    42    36
+ 49   (C) Ohio St University                                     938.797           2           1              59    60     -            41     -     -
+ 50   (C) Davidson College                                       937.197           1           1              62     -     -            39     -     -
+ 51   (C) University of North Carolina, Chapel Hill              937.130           1           3              62     -     -            39    32    16
+ 52   (C) Penn State University                                  929.555           1           3              65     -     -            42    31    24
+ 53   (C) Washington University in St. Louis                     929.405           0           3               -     -     -            42    34    27
+ 54   (C) Minnesota, University of                               927.394           0           2               -     -     -            41    38     -
+ 55   (C) Bryant University                                      919.092           4           4              56    57    61            57    47    45
+ 56   (C) Babson College                                         916.017           1           4              57     -     -            55    46    45
+ 57   (C) Brandeis University                                    913.370           1           3              55     -     -            56    55    45
+ 58   (C) Georgetown University                                  910.324           0           5               -     -     -            45    27    24
+ 59   (C) Kenyon College                                         901.857           0           1               -     -     -            49     -     -
+ 60   (C) Indiana University Bloomington                         901.752           0           2               -     -     -            49    41     -
+ 61   (V) Vassar College                                         898.724           4           7              63    64    65            55    47    45
+ 62   (C) Sewanee: University of the South                       894.979           0           3               -     -     -            51    50    39
+ 63   (C) Lafayette College                                      877.516           1           2              64     -     -            61    24     -
+ 64   (C) Swarthmore College                                     855.109           2           5              65    66     -            63    61    42
+ 65   (C) Siena College                                          828.710           1           6              67     -     -            64    61    55
+ 66   (C) Colgate University                                     823.559           0           3               -     -     -            64    61    42
+ 67   (C) University of Vermont                                  798.060           0           1               -     -     -            65     -     -
+ 68   (C) Washington, University of                            -4000.000           0           0               -     -     -             -     -     -
+ 69   (C) North Carolina, Chapel Hill, University of           -4000.000           0           0               -     -     -             -     -     -
+
+ Inspect file fort.66 for possible errors!!!
+ (In case there are missing teams, players, etc)
+iMac:Men2017_18 pomphrey$ 

@@ -4,7 +4,7 @@
 # so far in the season. Uses self-consistent ELO for the ranking system
 
 # Import data from CSV file
-data <- read.csv("Men'sPreNationals16-17.csv", header=TRUE, stringsAsFactors=FALSE)
+data <- read.csv("Women'sPreNationals16-17.csv", header=TRUE, stringsAsFactors=FALSE)
 
 # This value will affect the spread of the ELO rankings but not the actual order
 PointScale <- 6.67

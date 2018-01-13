@@ -1,33 +1,36 @@
 # Samuel Scherl
-# 1/2/18
+# 1/12/18
 # Calculates the team rankings of a squash season with the input being a CSV file of matches that have been played
 # so far in the season. Uses self-consistent ELO for the ranking system
 
-# Get name of file from user
+#Get from user whether diagnostics will be printed
+cat("\n")
+cat("Would you like diagnostic information to be printed: ")
+diagnostic <- readLines("stdin", n=1)
+if (diagnostic == "Yes" | diagnostic == "yes" | diagnostic == "Y" | diagnostic == "y")
+{
+  diagnostic <- TRUE
+}
+
+# Get name of file from user and imports data from the given file
 cat("\n")
 cat("Input the name of the file to be read: ")
 FileName <- readLines("stdin", n=1)
-
 FileName <- paste(FileName, ".csv", sep="")
-
-# Import data from CSV file
 data <- read.csv(FileName, header=TRUE, stringsAsFactors=FALSE)
 
 # Minimum number of matches that need to be played in order for the team to be ranked
 cat("\n")
 cat("Input the required minimum number of played matches: ")
 CutOff <- strtoi(readLines("stdin", n=1))
-
 check.integer <- function(N)
 {
   !grepl("[^[:digit:]]", format(N,  digits = 20, scientific = FALSE))
 }
-
 if (check.integer(CutOff) == FALSE)
 {
   stop("Invalid value for match cutoff")
 }
-
 
 # This value will affect the spread of the ELO rankings but not the actual order
 PointScale <- 6.67
@@ -45,6 +48,7 @@ if (Continue != "")
 {
   stop("The user chose to end the program")
 }
+
 # Only includes fields from input CSV which are relevant
 data <- subset(data, select = -c(winnersTeamName, losersTeamName, winner, loser, matchdate, scorecrdid, descr, positionplayed, score, hteamid, vteamid))
 
@@ -85,6 +89,56 @@ for (i in 1:NumColleges)
 OverAllRecord <- OverAllRecord[order(OverAllRecord[,"Winner"]), ]
 colnames(OverAllRecord)[1]<-"College"
 
+# Only prints the below diagnostic information if the user has selected it
+if (diagnostic == TRUE)
+{
+  # Prints a list of all teams in the data
+  cat("\n")
+  print(OverAllRecord[,1])
+  cat("\n")
+  cat("Above are all the team that are in the given data\n")
+  cat("\n")
+  cat(paste("Total number of teams: ", nrow(OverAllRecord),"\n",sep=""))
+  cat("\n")
+  cat("Press return to continue: ")
+  Continue <- readLines("stdin", n=1)
+  if (Continue != "")
+  {
+    stop("The user chose to end the program")
+  }
+
+  # Prints all the matchups in the data
+  cat("\n")
+  options(width=120)
+  print(competitions[c(1,2)], right = FALSE)
+  options(width=75)
+  cat("\n")
+  cat("Above are all the matches that are in the given data\n")
+  cat("\n")
+  cat(paste("Total number of matches: ", nrow(competitions),"\n",sep=""))
+  cat("\n")
+  cat("Press return to continue: ")
+  Continue <- readLines("stdin", n=1)
+  if (Continue != "")
+  {
+    stop("The user chose to end the program")
+  }
+  
+  # Prints each team's record for the season
+  cat("\n")
+  print(OverAllRecord[c(1,2,3)], right = FALSE, row.names = FALSE)
+  cat("\n")
+  cat("Above are all the overall records for each team\n")
+  cat("\n")
+  cat("Press return to continue to calculating rankings: ")
+  Continue <- readLines("stdin", n=1)
+  if (Continue != "")
+  {
+    stop("The user chose to end the program")
+  }
+  cat("\n")
+}
+
 # Create and populates collegeMatrix of all teams to hold their records against each other
 # CollegeMatrix[i, j] holds how many times team i has beaten team j
 NamesColleges <- OverAllRecord[,1]
@@ -103,19 +157,6 @@ DiffWinSum <- c(rep(1, NumColleges))
 # A vector that will hold the current points for each team, this will be updated with each iteration
 Points<-c(rep(1000, NumColleges))
 
-# Checks that all values in DiffWinSum are within the given convergence value range
-# This range is from (-convergenceValue to +convergenceValue)
-convergence <- function()
-{
-  return (max(abs(DiffWinSum)) <= convergenceValue)
-}
-
-# Returns the probability that team i beats team j
-winProb <- function(i, j)
-{
-  return (1/(1+exp((-(i - j)/PointScale))))
-}
-
 #  Populates TotalMatch Matrix so that at spot TotalMatchMatrix[i, j] holds the total amount of times team i has played j
 TotalMatchMatrix<-matrix(0, nrow = length(NamesColleges), ncol = length(NamesColleges))
 for (i in 1: NumColleges)
@@ -129,6 +170,18 @@ for (i in 1: NumColleges)
 # Creates a Win Matrix where WinMatrix[i,j] holds the probability that team I beats team J
 WinMatrix<-matrix(0, nrow = length(NamesColleges), ncol = length(NamesColleges))
 
+# Checks that all values in DiffWinSum are within the given convergence value range
+# This range is from (-convergenceValue to +convergenceValue)
+convergence <- function()
+{
+  return (max(abs(DiffWinSum)) <= convergenceValue)
+}
+
+# Returns the probability that team i beats team j
+winProb <- function(i, j)
+{
+  return (1/(1+exp((-(i - j)/PointScale))))
+}
 
 # Loops through and iterates Point's values until convergence is achieved
 k <- 0
@@ -138,6 +191,7 @@ while (convergence() == FALSE)
   {
     cat(paste("Iteration #", k, "    Max Diff Win: ",max(abs(DiffWinSum)),"\n", sep = "" ))
   }
+  
   # Populates WinMatrix with the win probabilities of team i beating team j
   WinMatrix <- outer(Points,Points,winProb)
   
@@ -148,16 +202,8 @@ while (convergence() == FALSE)
   Points <- Points + DiffWinSum
   k <- k + 1
 }
-cat("\n")
-cat(paste("Iterations for Convergence: ", k, "\n", sep = ""))
-cat("\n")
-cat(paste("The resulting Rankings have been written to a csv file called: ", "output_", FileName,"\n", sep = ""))
-cat("\n")
-cat("You should open and save this file as an excel file in order to read it\n")
-cat("\n")
 
 # Penalizes teams that haven't played enough matches by dropping them to the bottom of the rankings
-BelowCutoff <- vector()
 for (i in 1:NumColleges)
 {
   if (OverAllRecord[i, 4] < CutOff)
@@ -202,9 +248,10 @@ for (i in 1:NumColleges)
   {
     if (j <= nrow(helper))
     {
-      Ratings[i, 5 + j] <- paste("(", which(grepl(helper[j,2], Ratings$College)), ") ",helper[j, 2],sep = "")
+      Ratings[i, 5 + j] <- paste("(", which(helper[j,2] == Ratings$College), ") ",helper[j, 2],sep = "")
     }
   }
+  
   # Adding Worst Losses
   helper <- subset(competitions, Loser == Ratings[i, 2])
   helper <- helper[with(helper, order(-Odds)),]
@@ -212,17 +259,35 @@ for (i in 1:NumColleges)
   {
     if (j <= nrow(helper))
     {
-      Ratings[i, 8 + j] <- paste("(", which(grepl(helper[j,1], Ratings$College)), ") ",helper[j, 1],sep = "")
+      Ratings[i, 8 + j] <- paste("(", which(helper[j,1] == Ratings$College), ") ",helper[j, 1],sep = "")
     }
   }
 }
 
+# Prints out any teams that are tied in ranking points
+cat("\n------------------------------------------------\n")
+for (i in 1:(NumColleges - 1))
+{
+  for (j in (i+1):NumColleges)
+  {
+    if (abs(Ratings[i,3] - Ratings[j,3]) < convergenceValue)
+    {
+        cat(paste("'",Ratings[i,2],"'", " and ","'", Ratings[j,2],"'"," are tied in ranking points. Please manually adjust", "\n", sep=""))
+        cat("\n")
+    }
+  }
+}
+cat("-----------------------------------------------\n")
+
+# Prints out final information for user
+cat("\n")
+cat(paste("Iterations for Convergence: ", k, "\n", sep = ""))
+cat("\n")
+cat(paste("The resulting Rankings have been written to a csv file called: ", "output_", FileName,"\n", sep = ""))
+cat("\n")
+cat("You should open and save this file as an excel file in order to read it\n")
+cat("\n")
+
 # Writes the output to a CSV file
 output <- paste("output_", FileName, sep="")
 write.csv(Ratings, file = output, row.names=FALSE, na="")
-
-# Removes varaibles from memory which are unnecessary
-rm(BelowCutoff, DiffWinSum, i, convergenceValue, OverAllRecord, helper)
-rm(pointsLoser, pointsWinner, FileName)
-rm(convergence, winProb, Points, TotalMatchMatrix, WinMatrix)
-rm(CutOff, k, NamesColleges, j, NumColleges, collegeMatrix, PointScale)
