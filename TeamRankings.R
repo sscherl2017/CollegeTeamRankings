@@ -49,8 +49,12 @@ if (Continue != "")
   stop("The user chose to end the program")
 }
 
-# Only includes fields from input CSV which are relevant
+# Only includes fields from input CSV which are relevant and removes trailing lines from input file
 data <- subset(data, select = -c(winnersTeamName, losersTeamName, winner, loser, matchdate, scorecrdid, descr, positionplayed, score, hteamid, vteamid))
+while (nrow(data) %% 10 != 0)
+{
+  data <- data[-nrow(data),] 
+}
 
 # Creates the data frame "competitions" which is made of the results of matches and the probability of that result
 competitions <- data.frame(Winner=character(), Loser=character(), Odds=double(), stringsAsFactors=FALSE) 

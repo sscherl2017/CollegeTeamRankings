@@ -4,7 +4,7 @@
 # so far in the season. Uses self-consistent ELO for the ranking system
 
 # Import data from CSV file
-data <- read.csv("Women'sPreNationals16-17.csv", header=TRUE, stringsAsFactors=FALSE)
+data <- read.csv("CSA_Women_Results011518.csv", header=TRUE, stringsAsFactors=FALSE)
 
 # This value will affect the spread of the ELO rankings but not the actual order
 PointScale <- 6.67
@@ -21,12 +21,18 @@ ptm <- proc.time()
 # Only includes fields from input CSV which are relevant
 data <- subset(data, select = -c(winnersTeamName, losersTeamName, winner, loser, matchdate, scorecrdid, descr, positionplayed, score, hteamid, vteamid))
 
+while (nrow(data) %% 10 != 0)
+{
+  data <- data[-nrow(data),] 
+}
+
 # Creates the data frame "competitions" which is made of the results of matches and the probability of that result
 competitions <- data.frame(Winner=character(), Loser=character(), Odds=double(), stringsAsFactors=FALSE) 
 for (i in 1:nrow(data))
 {
   if (i %% 10 == 1)
   {
+    print(i)
     if (data[i, 3] > data[i, 4])
     {
       competitions[nrow(competitions) + 1, "Winner"] <- data[i, 1]
