@@ -258,7 +258,7 @@ for (i in 1:NumColleges)
   
   # Adding Worst Losses
   helper <- subset(competitions, Loser == Ratings[i, 2])
-  helper <- helper[with(helper, order(-Odds)),]
+  helper <- helper[with(helper, order(Odds)),]
   for (j in 1:3)
   {
     if (j <= nrow(helper))
